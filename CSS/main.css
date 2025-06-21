@@ -1,5 +1,5 @@
 :root {
-            --primary-orange: #7c0606;
+            --primary-orange: #c52323;
             --primary-orange-dark: #e55a2e;
             --bg-primary: #0a0e1a;
             --bg-secondary: #1a1f2e;
@@ -252,7 +252,7 @@
         }
 
         .btn-secondary-custom:hover {
-            background: var(--primary-orange);
+            background:rgba(255, 4, 4, 0.524);
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(122, 18, 18, 0.4);
