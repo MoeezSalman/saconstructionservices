@@ -466,49 +466,246 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-section {
-                padding: 100px 0 60px;
+        @media (max-width: 1200px) {
+            .slideshow-container {
+                max-width: 90%;
+                max-height: auto;
             }
+            
+            .slide img {
+                width: 100%;
+                height: auto;
+                max-height: 500px;
+            }
+        }
 
-            .profile-card,
-            .contact-info-card,
-            .feedback-form {
-                padding: 2rem;
+        @media (max-width: 992px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .page-header {
+                padding: 100px 0 40px;
+            }
+            
+            .project-section {
+                margin: 2rem 0;
+                padding: 2rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
                 margin-bottom: 2rem;
             }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
+            
+            .slide img {
+                max-height: 450px;
             }
+            
+            .slide-content {
+                padding: 1.5rem;
+            }
+        }
 
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-toggler {
+                border: none;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .nav-link {
+                margin: 0.25rem 0;
+                padding: 0.5rem 1rem;
+            }
+            
+            .theme-toggle {
+                width: 40px;
+                height: 40px;
+                margin-top: 1rem;
+            }
+            
+            .page-header {
+                padding: 80px 0 30px;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .slideshow-container {
+                border-radius: 15px;
+                margin: 0 1rem;
+            }
+            
+            .slide img {
+                max-height: 350px;
+            }
+            
+            .slide-content {
                 padding: 1rem;
             }
-
-            .contact-icon {
-                margin-right: 0;
-                margin-bottom: 1rem;
+            
+            .slide-title {
+                font-size: 1.2rem;
             }
-
-            .location-map {
-                height: 250px;
+            
+            .slide-description {
+                font-size: 0.9rem;
+            }
+            
+            .nav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .prev-btn {
+                left: 10px;
+            }
+            
+            .next-btn {
+                right: 10px;
+            }
+            
+            .contact-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                bottom: 1rem;
+                right: 1rem;
             }
         }
 
         @media (max-width: 576px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
+            .navbar-brand {
+                font-size: 1rem;
             }
-
-            .rating-group {
-                flex-wrap: wrap;
+            
+            .page-header {
+                padding: 70px 0 20px;
             }
-
-            .star {
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
                 font-size: 1.5rem;
+            }
+            
+            .slideshow-container {
+                margin: 0 0.5rem;
+                border-radius: 10px;
+            }
+            
+            .slide img {
+                max-height: 280px;
+            }
+            
+            .slide-content {
+                padding: 0.8rem;
+            }
+            
+            .slide-title {
+                font-size: 1rem;
+            }
+            
+            .slide-description {
+                font-size: 0.85rem;
+            }
+            
+            .nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            
+            .prev-btn {
+                left: 5px;
+            }
+            
+            .next-btn {
+                right: 5px;
+            }
+            
+            .dot {
+                height: 12px;
+                width: 12px;
+                margin: 0 3px;
+            }
+            
+            .contact-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.8rem;
+            }
+            
+            .dots-container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slideshow-container {
+                margin: 0 0.25rem;
+            }
+            
+            .slide img {
+                max-height: 250px;
+            }
+            
+            .section-title::after {
+                width: 60px;
+                height: 3px;
+            }
+        }
+
+        /* Footer responsive adjustments */
+        @media (max-width: 768px) {
+            footer {
+                text-align: center;
+            }
+            
+            footer .col {
+                margin-bottom: 2rem;
+            }
+            
+            footer img {
+                max-height: 50px;
+            }
+            
+            footer p {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Navbar collapse improvements for mobile */
+        @media (max-width: 992px) {
+            .navbar-collapse {
+                background: var(--card-bg);
+                border-radius: 10px;
+                margin-top: 1rem;
+                padding: 1rem;
+                border: 1px solid var(--border-color);
+            }
+            
+            .navbar-nav {
+                text-align: center;
+            }
+            
+            .theme-toggle {
+                margin: 1rem auto 0;
             }
         }
