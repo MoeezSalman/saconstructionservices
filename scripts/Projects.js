@@ -1,73 +1,13 @@
- const slideshows = {
-            construction: {
-                currentSlide: 0,
-                totalSlides: 21
-            },
-            office: {
-                currentSlide: 0,
-                totalSlides: 9
-            },
-            brand: {
-                currentSlide: 0,
-                totalSlides: 6
-            }
-        };
-
-        function showSlide(slideshowType, slideIndex) {
-            const slideshow = document.getElementById(slideshowType + 'Slideshow');
-            const slides = slideshow.querySelectorAll('.slide');
-            const dots = slideshow.querySelectorAll('.dot');
-            
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            slides[slideIndex].classList.add('active');
-            dots[slideIndex].classList.add('active');
-            
-            slideshows[slideshowType].currentSlide = slideIndex;
-        }
-
-        function changeSlide(slideshowType, direction) {
-            const slideshow = slideshows[slideshowType];
-            let newSlide = slideshow.currentSlide + direction;
-            
-            if (newSlide >= slideshow.totalSlides) {
-                newSlide = 0;
-            } else if (newSlide < 0) {
-                newSlide = slideshow.totalSlides - 1;
-            }
-            
-            showSlide(slideshowType, newSlide);
-        }
-
-        function currentSlide(slideshowType, slideIndex) {
-            showSlide(slideshowType, slideIndex - 1);
-        }
-
-        // Auto-advance slideshows
-        function autoAdvanceSlideshow(slideshowType, interval) {
-            setInterval(() => {
-                changeSlide(slideshowType, 1);
-            }, interval);
-        }
-
-        // Start auto-advance for all slideshows
-        autoAdvanceSlideshow('construction', 5000);
-        autoAdvanceSlideshow('office', 6000);
-        autoAdvanceSlideshow('brand', 7000);
-
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
+ const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
         const body = document.body;
 
-        // Check for saved theme preference or default to 'dark'
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        if (currentTheme === 'light') {
+        // Check for saved theme preference or default to dark mode
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        
+        if (savedTheme === 'light') {
             body.setAttribute('data-theme', 'light');
             themeIcon.className = 'fas fa-sun';
-        } else {
-            themeIcon.className = 'fas fa-moon';
         }
 
         themeToggle.addEventListener('click', () => {
@@ -84,7 +24,7 @@
             }
         });
 
-        // Navbar scroll effect
+        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 100) {
@@ -94,7 +34,50 @@
             }
         });
 
-        // Smooth scrolling for navigation links
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                        item.style.animation = 'fadeInUp 0.6s ease forwards';
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Animate gallery items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all gallery items
+        galleryItems.forEach(item => {
+            observer.observe(item);
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -105,5 +88,44 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Add loading animation delay to gallery items
+        galleryItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Video lazy loading
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('loadstart', () => {
+                video.style.opacity = '0.5';
+            });
+            
+            video.addEventListener('canplay', () => {
+                video.style.opacity = '1';
+            });
+        });
+
+        // Performance optimization: Debounce scroll events
+        let scrollTimeout;
+        function debounceScroll() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                // Scroll-based animations can go here
+            }, 10);
+        }
+
+        window.addEventListener('scroll', debounceScroll);
+
+        // Add hover effects to gallery items
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0) scale(1)';
             });
         });
