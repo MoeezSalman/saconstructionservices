@@ -300,9 +300,9 @@
         }
 
         .contact-icon {
-            width: 60px;
+            width: 90px;
             height: 60px;
-            background: var(--gradient-primary);
+            background: rgb(82, 19, 19);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -313,6 +313,7 @@
         }
 
         .contact-details h4 {
+            
             font-size: clamp(1.1rem, 2vw, 1.3rem);
             color: var(--text-primary);
             margin-bottom: 0.5rem;
@@ -585,7 +586,7 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 0.9rem;
                 bottom: 1rem;
-                right: 1rem;
+                right: 0.5rem;
             }
         }
 
