@@ -14,7 +14,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <img src="pics/SA.jpg" alt="" width="40px" style="position: relative;left: -20px;">
+            <img src="pics/SA.jpg" alt="" width="40px" style="position: relative;left: -10px;">
             <a class="navbar-brand" href="index.html">
                 SA CONSTRUCTION SERVICES
             </a>
@@ -57,393 +57,240 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title" style="position: relative;top: 50px;">Our Projects</h1>
-            <p class="page-subtitle" style="position: relative;top: 70px;">Explore our portfolio of exceptional construction and design work</p>
+            <h1 class="page-title">Our Projects</h1>
+            <p class="page-subtitle">Explore our portfolio of exceptional construction and design work</p>
         </div>
     </section>
 
-    <section class="project-section">
+    <!-- Residential Projects Video Section -->
+    <section class="video-section">
         <div class="container">
-            <h2 class="section-title">Modern Construction Designs</h2>
-            <div class="slideshow-container" id="constructionSlideshow">
-                <div class="slide active">
+            <h2 class="section-title">Residential Projects</h2>
+            <div class="video-container">
+                <video controls poster="pics/modern1.png">
+                    <source src="residential.mp4" type="video/mp4">
+                    <source src="videos/residential-showcase.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Projects Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="section-title">Commercial Projects</h2>
+            <div class="video-container">
+                <video controls poster="pics/office1.png">
+                    <source src="Commercial.mp4" type="video/mp4">
+                    <source src="videos/commercial-showcase.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2 class="section-title">Browse Our Gallery</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large me-2"></i>All Projects
+                </button>
+                <button class="filter-btn" data-filter="residential">
+                    <i class="fas fa-home me-2"></i>Residential
+                </button>
+                <button class="filter-btn" data-filter="commercial">
+                    <i class="fas fa-building me-2"></i>Commercial
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Residential Projects -->
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
                     <img src="pics/modern1.png" alt="Modern Home">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Grey Structure Housing Modern Construction</h3>
-                        <p class="slide-description">Modern home design featuring clean lines and sustainable materials</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern2.png" alt="Apartment Complex">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Luxury Modern Construction</h3>
-                        <p class="slide-description">Multi-story building with modern amenities and smart home features</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern3.png" alt="Commercial Building">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Commercial Complex</h3>
-                        <p class="slide-description">State-of-the-art commercial building with energy-efficient design</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern4.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Modern Luxurious Construction</h3>
-                        <p class="slide-description">Luxury Construction with panoramic views and innovative architectural features</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern5.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Prestigious architecture Construction</h3>
-                        <p class="slide-description">Luxury builds offering breathtaking vistas and groundbreaking architectural innovation</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern 6.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Bed Back Wall Design</h3>
-                        <p class="slide-description">Elevated living with visionary design and stunning surroundings</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern 7.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Bed Back Wall Design</h3>
-                        <p class="slide-description">Elevated living with visionary design and stunning surroundings</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/modern design 8.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Wall Cabinets Design</h3>
-                        <p class="slide-description">Innovative wall Cabinet Design and its execution</p>
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Grey Structure Housing Modern Construction</h3>
+                        <p class="gallery-item-description">Modern home design featuring clean lines and sustainable materials</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/modern design 9.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">10 Marla House Finishing Works</h3>
-                        <p class="slide-description">Innovative Design and its execution</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern2.png" alt="Luxury Construction">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Luxury Modern Construction</h3>
+                        <p class="gallery-item-description">Multi-story building with modern amenities and smart home features</p>
                     </div>
                 </div>
 
-                 <div class="slide">
-                    <img src="pics/modern design 10.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern3.png" alt="Villa Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Modern Villa Design</h3>
+                        <p class="gallery-item-description">Luxury villa with panoramic views and innovative architectural features</p>
                     </div>
                 </div>
 
-                 <div class="slide">
-                    <img src="pics/modern design 11.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern4.png" alt="Luxurious Construction">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Modern Luxurious Construction</h3>
+                        <p class="gallery-item-description">Luxury construction with panoramic views and innovative architectural features</p>
                     </div>
                 </div>
 
-                 <div class="slide">
-                    <img src="pics/modern design 12.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern5.png" alt="Prestigious Architecture">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Prestigious Architecture Construction</h3>
+                        <p class="gallery-item-description">Luxury builds offering breathtaking vistas and groundbreaking architectural innovation</p>
                     </div>
                 </div>
 
-                
-                 <div class="slide">
-                    <img src="pics/modern design 13.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern 6.png" alt="Bed Back Wall Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Bed Back Wall Design</h3>
+                        <p class="gallery-item-description">Elevated living with visionary design and stunning surroundings</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/modern design 14.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern 7.png" alt="Bed Back Wall Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Bed Back Wall Design</h3>
+                        <p class="gallery-item-description">Elevated living with visionary design and stunning surroundings</p>
                     </div>
                 </div>
 
-                   <div class="slide">
-                    <img src="pics/modern design 15.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern design 8.png" alt="Wall Cabinets">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Wall Cabinets Design</h3>
+                        <p class="gallery-item-description">Innovative wall cabinet design and its execution</p>
                     </div>
                 </div>
 
-
-                  <div class="slide">
-                    <img src="pics/modern design 16.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern design 9.png" alt="10 Marla House">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">10 Marla House Finishing Works</h3>
+                        <p class="gallery-item-description">Innovative design and its execution</p>
                     </div>
                 </div>
 
-                    <div class="slide">
-                    <img src="pics/modern design 17.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-item-category">Residential</div>
+                    <img src="pics/modern design 10.png" alt="1 Kanal Project">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">1 Kanal Project Finishing Works</h3>
+                        <p class="gallery-item-description">Innovative design and its finalization</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/modern design 18.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
-                    </div>
-                </div>
-                
-                 <div class="slide">
-                    <img src="pics/modern design 19.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <!-- Commercial Projects -->
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/office1.png" alt="Modern Office">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Modern Corporate Office</h3>
+                        <p class="gallery-item-description">Open-plan workspace with contemporary design elements and natural lighting</p>
                     </div>
                 </div>
 
-                 <div class="slide">
-                    <img src="pics/modern design 20.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">1 Kanal Project Finishing works</h3>
-                        <p class="slide-description">Innovative Design and its finalization</p>
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/office3.png" alt="Wall Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Office Wall Design</h3>
+                        <p class="gallery-item-description">Luxurious executive office with premium finishes and ergonomic design</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/modern design 21.png" alt="Villa Design">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Elavated Modern Design By SA Consultants Services</h3>
-                        <p class="slide-description">Innovative Design</p>
-                    </div>
-                </div>
-
-                <button class="nav-btn prev-btn" onclick="changeSlide('construction', -1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-btn next-btn" onclick="changeSlide('construction', 1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide('construction', 1)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 2)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 3)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 4)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 5)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 6)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 7)"></span>
-                    <span class="dot" onclick="currentSlide('construction', 8)"></span>
-                     <span class="dot" onclick="currentSlide('construction', 9)"></span>
-                     <span class="dot" onclick="currentSlide('construction', 10)"></span>
-                     <span class="dot" onclick="currentSlide('construction', 11)"></span>
-                     <span class="dot" onclick="currentSlide('construction', 12)"></span>
-                      <span class="dot" onclick="currentSlide('construction', 13)"></span>
-                      <span class="dot" onclick="currentSlide('construction', 14)"></span>
-                      <span class="dot" onclick="currentSlide('construction', 15)"></span>
-                       <span class="dot" onclick="currentSlide('construction', 16)"></span>
-                         <span class="dot" onclick="currentSlide('construction', 17)"></span>
-                         <span class="dot" onclick="currentSlide('construction', 18)"></span>
-                         <span class="dot" onclick="currentSlide('construction', 19)"></span>
-                           <span class="dot" onclick="currentSlide('construction', 20)"></span>
-                           <span class="dot" onclick="currentSlide('construction', 21)"></span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Office Designs Section -->
-    <section class="project-section">
-        <div class="container">
-            <h2 class="section-title">Office Designs</h2>
-            <div class="slideshow-container" id="officeSlideshow">
-                <div class="slide active">
-                    <img src="pics/office1.png" alt="Modern Office Space">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Modern Corporate Office</h3>
-                        <p class="slide-description">Open-plan workspace with contemporary design elements and natural lighting</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/office3.png" alt="Executive Office">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Wall Design</h3>
-                        <p class="slide-description">Luxurious executive office with premium finishes and ergonomic design</p>
-                    </div>
-                </div>
-                <div class="slide">
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
                     <img src="pics/office4.png" alt="Creative Workspace">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Creative Workspace Design</h3>
-                        <p class="slide-description">Dynamic office environment designed to inspire creativity and collaboration</p>
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Creative Workspace Design</h3>
+                        <p class="gallery-item-description">Dynamic office environment designed to inspire creativity and collaboration</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="pics/office5.png" alt="Meeting Room">
-                    <div class="slide-content">
-                        <h3 class="slide-title"> Office Design</h3>
-                        <p class="slide-description">Luxuirios office design that makes the working experience on to the next level</p>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/office5.png" alt="Office Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Luxury Office Design</h3>
+                        <p class="gallery-item-description">Luxurious office design that makes the working experience to the next level</p>
                     </div>
                 </div>
-                <div class="slide">
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
                     <img src="pics/office6.png" alt="Waiting Room">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Waiting Room</h3>
-                        <p class="slide-description">State-of-the-art waiting rooms</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="pics/office 7.png" alt="Executive Office">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Executive Suite</h3>
-                        <p class="slide-description">Luxurious executive office with premium finishes and ergonomic design</p>
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Waiting Room Design</h3>
+                        <p class="gallery-item-description">State-of-the-art waiting rooms with modern aesthetics</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/office 8.png" alt="Executive Office">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Team Room</h3>
-                        <p class="slide-description">Luxurious Team Room with premium finishes and ergonomic design</p>
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/brand design 1.png" alt="Retail Store">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Luxury Retail Store</h3>
+                        <p class="gallery-item-description">High-end retail space with sophisticated brand presentation</p>
                     </div>
                 </div>
 
-                <div class="slide">
-                    <img src="pics/office 9.png" alt="Executive Office">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Huddle Room</h3>
-                        <p class="slide-description">Luxurious Huddle Room with premium finishes and ergonomic design</p>
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/brand design 2.png" alt="Interior Design">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Commercial Interior Design</h3>
+                        <p class="gallery-item-description">Elegant commercial space with brand-focused interior design</p>
                     </div>
                 </div>
 
-                 <div class="slide">
-                    <img src="pics/office 10.png" alt="Executive Office">
-                    <div class="slide-content">
-                        <h3 class="slide-title">Conference Room</h3>
-                        <p class="slide-description">Luxurious Conference Room with premium finishes and ergonomic design</p>
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/brand design 3.png" alt="Showroom">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Brand Showroom</h3>
+                        <p class="gallery-item-description">Interactive showroom designed to showcase products and brand identity</p>
                     </div>
                 </div>
 
-
-                <button class="nav-btn prev-btn" onclick="changeSlide('office', -1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="nav-btn next-btn" onclick="changeSlide('office', 1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="dots-container">
-                    <span class="dot active" onclick="currentSlide('office', 1)"></span>
-                    <span class="dot" onclick="currentSlide('office', 2)"></span>
-                    <span class="dot" onclick="currentSlide('office', 3)"></span>
-                    <span class="dot" onclick="currentSlide('office', 4)"></span>
-                    <span class="dot" onclick="currentSlide('office', 5)"></span>
-                    <span class="dot" onclick="currentSlide('office', 6)"></span>
-                    <span class="dot" onclick="currentSlide('office', 7)"></span>
-                    <span class="dot" onclick="currentSlide('office', 8)"></span>
-                     <span class="dot" onclick="currentSlide('office', 9)"></span>
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-item-category">Commercial</div>
+                    <img src="pics/brand design 4.png" alt="Al Khidmat Center">
+                    <div class="gallery-item-content">
+                        <h3 class="gallery-item-title">Al Khidmat Center</h3>
+                        <p class="gallery-item-description">Interactive design of Al Khidmat Center with modern facilities</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Brand Site Designs Section -->
-   <section class="project-section">
-    <div class="container">
-        <h2 class="section-title">Brand Site Designs</h2>
-        <div class="slideshow-container" id="brandSlideshow">
-
-            <div class="slide active">
-                <img src="pics/brand design 1.png" alt="Retail Store">
-                <div class="slide-content">
-                    <h3 class="slide-title">Luxury Retail Store</h3>
-                    <p class="slide-description">High-end retail space with sophisticated brand presentation and customer experience</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="pics/brand design 2.png" alt="Restaurant Design">
-                <div class="slide-content">
-                    <h3 class="slide-title">Interior Design</h3>
-                    <p class="slide-description">Elegant dining establishment with brand-focused interior design and ambiance</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="pics/brand design 3.png" alt="Showroom">
-                <div class="slide-content">
-                    <h3 class="slide-title">Brand Showroom</h3>
-                    <p class="slide-description">Interactive showroom designed to showcase products and brand identity</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="pics/brand design 4.png" alt="Showroom">
-                <div class="slide-content">
-                    <h3 class="slide-title">Al Khidmat Center</h3>
-                    <p class="slide-description">Interactive design of Al Khidmat Center</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="pics/brand design 5.png" alt="Showroom">
-                <div class="slide-content">
-                    <h3 class="slide-title">Al Khidmat Center</h3>
-                    <p class="slide-description">Interactive and modern design of sitting arrangement</p>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="pics/brand design 6.png" alt="Showroom">
-                <div class="slide-content">
-                    <h3 class="slide-title">Al Khidmat Center</h3>
-                    <p class="slide-description"></p>
-                </div>
-            </div>
-            <!-- FIXED: This slide moved INSIDE -->
-            <div class="slide">
-                <img src="pics/brand design 7.png" alt="Showroom">
-                <div class="slide-content">
-                    <h3 class="slide-title">Al Khidmat Center</h3>
-                    <p class="slide-description">Interactive design of food area</p>
-                </div>
-            </div>
-
-            <!-- Buttons and dots -->
-            <button class="nav-btn prev-btn" onclick="changeSlide('brand', -1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="nav-btn next-btn" onclick="changeSlide('brand', 1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <div class="dots-container">
-                <span class="dot active" onclick="currentSlide('brand', 1)"></span>
-                <span class="dot" onclick="currentSlide('brand', 2)"></span>
-                <span class="dot" onclick="currentSlide('brand', 3)"></span>
-                <span class="dot" onclick="currentSlide('brand', 4)"></span>
-                <span class="dot" onclick="currentSlide('brand', 5)"></span>
-                <span class="dot" onclick="currentSlide('brand', 6)"></span>
-                <span class="dot" onclick="currentSlide('brand', 7)"></span>
-            </div>
-
-        </div> <!-- end of slideshow-container -->
-    </div>
-</section>
-
 
     <!-- Floating Contact Button -->
-    <a href="aboutme.html" class="contact-btn" style="color: black;">
+    <a href="aboutme.html" class="contact-btn">
         <i class="fas fa-phone"></i>
         Contact Us
     </a>
 
+    <!-- Footer -->
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Logo" style="position: relative;left: 40px;">
@@ -486,8 +333,13 @@
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script src="scripts/Projects.js">
+        // Theme Toggle Functionality
+       
     </script>
 </body>
 </html>
